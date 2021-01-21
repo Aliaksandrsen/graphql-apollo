@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const schema = require("./schema");
 
-const users = [{ id: 1, username: "Nick", age: 25 }];
+const users = [{ id: "1", username: "Nick", age: 25 }];
 const app = express();
 app.use(cors());
 
@@ -21,7 +21,7 @@ const root = {
     return users;
   },
   getUser: ({ id }) => {
-    return users.find((user) => id === user.id);
+    return users.find((user) => user.id === id);
   },
   createUser: ({ input }) => {
     const user = createUser(input);
@@ -39,4 +39,4 @@ app.use(
   })
 );
 
-app.listen(3000, () => console.log("server started on port 3000"));
+app.listen(8000, () => console.log("server started on port 8000"));
