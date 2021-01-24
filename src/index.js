@@ -6,7 +6,7 @@ import { App } from "./App";
 import "./index.css";
 
 const client = new ApolloClient({
-  uri: "http://localhost:8000/graphql",
+  uri: "https://my-graphql-apollo-server.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 
